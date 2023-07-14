@@ -1,0 +1,36 @@
+version: "3"
+services:
+  db:
+    image: postgres:latest
+    restart: always
+    environment:
+      POSTGRES_DB: devmap
+      POSTGRES_PASSWORD: docker
+    ports:
+      - 5432:5432
+    volumes: 
+      - ~/docker/volumes/postgres:/var/lib/postgresql/data
+    networks:
+      - my_network
+  
+  server:
+    build: ./server
+    ports:
+      - "8081:8081"
+    networks:
+      - my_network
+    depends_on:
+      - db
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    networks:
+      - my_network
+    depends_on: 
+      - server
+
+networks:
+  my_network:
+    driver: bridge

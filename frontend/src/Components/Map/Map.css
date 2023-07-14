@@ -1,0 +1,51 @@
+.Map {
+  font-family: sans-serif;
+  /* text-align: center; */
+}
+
+/* * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+} */
+
+/* #root {
+  height: 100vh;
+} */
+
+.leaflet-container {
+  height: 50vh;
+  /* border-top: 5px solid blue; */
+  background: linear-gradient(to bottom, rgba(0, 0, 255, 0.5), rgba(0, 0, 0, 0.9));
+
+}
+
+.cluster-icon {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  background-color: blue;  
+  color: aliceblue;
+  transform: translate(-25%, -25%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+
+
+.popupView {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  margin: 0;
+  background-color: lightgrey;
+  font-size: 8px;
+}
+.pPop {
+  padding: 0px;
+  margin: 0px;
+}
+

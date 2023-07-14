@@ -1,0 +1,21 @@
+curl --header "Content-Type: application/json" \
+     --request POST \
+     --data '{
+         "data": {
+             "name": "Billy Bob",
+             "clearance": "Top Secret",
+             "has_skill_identifier": true,
+             "arrived_on_station": "2023-07-11",
+             "is_civilian": true,
+             "mos": "42A",
+             "rank": "E-4",
+             "email": "billybob@example.com",
+             "geocode": "41.40338, 2.17403",
+             "mgrs": "31TCH7672956498",
+             "branch_id": 4,
+             "unit_id": 6,
+             "installation_id": 8,
+             "photo": "https://example.com/photo.jpg"
+         }
+     }' \
+     http://localhost:8081/test
